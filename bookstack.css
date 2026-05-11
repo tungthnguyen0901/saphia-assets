@@ -1,3 +1,18 @@
+<script>
+    // Chỉ kích hoạt chế độ "Dashboard" nếu đường dẫn hiện tại là trang gốc (/)
+    if (window.location.pathname === '/') {
+        document.documentElement.classList.add('saphia-clean-home');
+    }
+</script>
+
+<style>
+    /* XÓA BỎ DẤU VẾT "PAGE" TRÊN TRANG CHỦ */
+    html.saphia-clean-home .breadcrumbs { display: none !important; }        /* Ẩn thanh Sách > Hệ thống > Trang chủ */
+    html.saphia-clean-home h1#bkmrk-page-title { display: none !important; } /* Ẩn Tiêu đề chữ to mặc định */
+    html.saphia-clean-home .page-meta { display: none !important; }          /* Ẩn thông tin Người tạo / Cập nhật */
+    html.saphia-clean-home #comments { display: none !important; }           /* Ẩn khu vực bình luận bên dưới */
+    html.saphia-clean-home .page-content { padding-top: 5px !important; }    /* Kéo cái Banner xanh lên cho sát mép trên */
+</style>
 /* HIỆU ỨNG CHUYỂN ĐỘNG (ANIMATIONS) */
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes gradientMove { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
