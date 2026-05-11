@@ -1,0 +1,70 @@
+/* HIỆU ỨNG CHUYỂN ĐỘNG (ANIMATIONS) */
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes gradientMove { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+.sp-animate { animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; opacity: 0; }
+.sp-delay-1 { animation-delay: 0.1s; } .sp-delay-2 { animation-delay: 0.3s; } .sp-delay-3 { animation-delay: 0.5s; } .sp-delay-4 { animation-delay: 0.7s; }
+
+.saphia-dashboard { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-top: 10px; overflow-x: hidden; }
+
+/* HERO BANNER */
+.sp-hero-v2 {
+    background: linear-gradient(-45deg, #0F52BA, #1E3A8A, #00BFFF, #0F52BA);
+    background-size: 300% 300%; animation: gradientMove 10s ease infinite, fadeInUp 0.8s ease forwards;
+    color: white; padding: 60px 40px; border-radius: 24px; text-align: center; margin-bottom: 40px;
+    box-shadow: 0 15px 35px rgba(15, 82, 186, 0.25); position: relative; overflow: hidden;
+}
+.sp-hero-v2::before { content: ''; position: absolute; top: -50%; left: -10%; width: 200px; height: 200px; background: rgba(255,255,255,0.1); filter: blur(40px); border-radius: 50%; }
+.sp-hero-v2 h1 { font-size: 2.8em; margin: 0 0 15px 0; font-weight: 800; color: white !important; border: none; letter-spacing: 1px;}
+.sp-hero-v2 p { font-size: 1.25em; margin: 0; opacity: 0.9; line-height: 1.6; font-weight: 400; max-width: 800px; margin: 0 auto;}
+
+/* THÔNG BÁO */
+.sp-alert-v2 {
+    background: linear-gradient(90deg, #FFF8EA, #ffffff); border-left: 6px solid #F59E0B;
+    padding: 20px 30px; border-radius: 12px; margin-bottom: 40px; display: flex; align-items: center; gap: 20px; color: #475569;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: transform 0.3s;
+}
+.sp-alert-v2:hover { transform: scale(1.01); }
+.sp-alert-icon { font-size: 1.8em; animation: pulse 2s infinite; }
+@keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+.sp-alert-text strong { color: #D97706; font-size: 1.1em;}
+
+/* VÒNG STAT */
+.sp-stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 50px; }
+.sp-stat-card { background: white; border: 1px solid #F1F5F9; padding: 30px 20px; border-radius: 24px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.04); transition: all 0.4s ease; }
+.sp-stat-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(15, 82, 186, 0.1); }
+.sp-ring-wrap { width: 130px; height: 130px; border-radius: 50%; margin: 0 auto 20px auto; display: flex; justify-content: center; align-items: center; position: relative; background: #E2E8F0; }
+.sp-ring-wrap::before { content: ""; position: absolute; width: 106px; height: 106px; background: white; border-radius: 50%; }
+.ring-blue { background: conic-gradient(#0F52BA 0% 85%, #E2E8F0 85% 100%); }
+.ring-green { background: conic-gradient(#10B981 0% 65%, #E2E8F0 65% 100%); }
+.ring-amber { background: conic-gradient(#F59E0B 0% 100%, #E2E8F0 100% 100%); }
+.sp-ring-val { position: relative; z-index: 1; font-size: 2em; font-weight: 800; }
+.val-blue { color: #0F52BA; } .val-green { color: #10B981; } .val-amber { color: #F59E0B; }
+.sp-stat-card p { margin: 0; color: #64748B; font-size: 1.1em; font-weight: 600; }
+
+/* TRUY CẬP NHANH */
+.sp-section-title { font-size: 1.6em; color: #0F172A; margin-bottom: 25px; font-weight: 800; display: flex; align-items: center; gap: 10px;}
+.sp-section-title::after { content: ''; flex: 1; height: 2px; background: #E2E8F0; margin-left: 15px;}
+.sp-links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+.sp-link-card {
+    background: white; border: 1px solid #E2E8F0; border-radius: 20px; padding: 30px; text-decoration: none !important; display: flex; flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;
+}
+.sp-link-card::before { content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); transform: skewX(-20deg); transition: 0.5s; z-index: 1; }
+.sp-link-card:hover::before { left: 150%; }
+.sp-link-card:hover { transform: translateY(-8px) scale(1.02); border-color: #0F52BA; box-shadow: 0 20px 40px rgba(15, 82, 186, 0.12); }
+.sp-link-icon { font-size: 3em; margin-bottom: 20px; transition: transform 0.3s; }
+.sp-link-card:hover .sp-link-icon { transform: scale(1.1) rotate(5deg); }
+.sp-link-title { font-size: 1.3em; font-weight: 800; margin-bottom: 10px; color: #1E293B; }
+.sp-link-desc { font-size: 1em; color: #64748B; margin: 0; line-height: 1.6; z-index: 2; position: relative;}
+
+/* DARK MODE CHUẨN BOOKSTACK */
+.dark-mode .sp-stat-card, .dark-mode .sp-link-card { background: #1E293B; border-color: #334155; box-shadow: 0 10px 30px rgba(0,0,0,0.2);}
+.dark-mode .sp-ring-wrap::before { background: #1E293B; }
+.dark-mode .ring-blue { background: conic-gradient(#38BDF8 0% 85%, #334155 85% 100%); }
+.dark-mode .ring-green { background: conic-gradient(#34D399 0% 65%, #334155 65% 100%); }
+.dark-mode .ring-amber { background: conic-gradient(#FBBF24 0% 100%, #334155 100% 100%); }
+.dark-mode .val-blue { color: #38BDF8; } .dark-mode .val-green { color: #34D399; } .dark-mode .val-amber { color: #FBBF24; }
+.dark-mode .sp-link-title, .dark-mode .sp-section-title { color: #F8FAFC; }
+.dark-mode .sp-alert-v2 { background: linear-gradient(90deg, #1E293B, #0F172A); border-color: #F59E0B; border-left: 6px solid #F59E0B;}
+.dark-mode .sp-section-title::after { background: #334155; }
+.dark-mode .sp-link-card:hover { border-color: #38BDF8; box-shadow: 0 20px 40px rgba(56, 189, 248, 0.15); }
