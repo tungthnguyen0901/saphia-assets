@@ -159,109 +159,58 @@
 /* KHÁM PHÁ THƯ VIỆN                                         */
 /* ========================================================= */
 
+/* ========================================================= */
+/* BOOKSTACK SAFE LAYOUT                                     */
+/* ========================================================= */
+
 .sp-explore-grid {
-    display: grid;
-    grid-template-columns: 4fr 2fr;
+    display: flex !important;
     gap: 25px;
-    align-items: start;
+    align-items: flex-start;
+    width: 100%;
 }
 
+/* LEFT */
 .sp-general-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    flex: 1 1 auto;
+    display: flex !important;
+    flex-wrap: wrap;
     gap: 20px;
+    min-width: 0;
 }
 
+/* CARD */
 .sp-link-card {
-    background: white;
-    border: 1px solid #E2E8F0;
-    border-radius: 20px;
-    padding: 30px;
-    transition: all 0.3s ease;
+    width: calc(50% - 10px);
+    box-sizing: border-box;
 }
 
-.sp-link-card:hover {
-    transform: translateY(-6px);
-    border-color: #0F52BA;
-    box-shadow: 0 20px 40px rgba(15,82,186,0.12);
-}
-
-.sp-link-card a {
-    color: inherit !important;
-    text-decoration: none !important;
-}
-
-.sp-link-icon {
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-
-.sp-link-title {
-    font-size: 1.3em;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: #1E293B;
-}
-
-.sp-link-desc {
-    color: #64748B;
-    line-height: 1.6;
-}
-
+/* RIGHT */
 .sp-dept-container {
-    background: linear-gradient(145deg, #ffffff, #f8fafc);
-    border: 1px solid #E2E8F0;
-    border-radius: 20px;
-    padding: 25px;
-}
-
-.sp-dept-header {
-    font-size: 1.1em;
-    font-weight: 800;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #E2E8F0;
-}
-
-.sp-dept-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.sp-dept-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 14px 18px;
-    background: #F8FAFC;
-    border-radius: 12px;
-    text-decoration: none !important;
-    color: #1E293B;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.sp-dept-item:hover {
-    background: #F0F9FF;
-    color: #0F52BA;
-    transform: translateX(6px);
-}
-
-.sp-dept-icon {
-    font-size: 1.4em;
+    width: 340px;
+    flex-shrink: 0;
 }
 
 /* MOBILE */
 @media (max-width: 900px) {
 
     .sp-explore-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
 
     .sp-general-cards {
-        grid-template-columns: 1fr;
+        width: 100%;
     }
+
+    .sp-link-card {
+        width: 100%;
+    }
+
+    .sp-dept-container {
+        width: 100%;
+    }
+
+}
 
 }
 
