@@ -155,42 +155,10 @@
 .dark-mode .sp-link-card:hover { border-color: #38BDF8; box-shadow: 0 20px 40px rgba(56, 189, 248, 0.15); }
 .dark-mode #bkmrk-page-title {color: #ffffff !important;}
 
-```css
 /* ========================================================= */
-/* 8. KHÁM PHÁ THƯ VIỆN                                      */
+/* KHÁM PHÁ THƯ VIỆN                                         */
 /* ========================================================= */
 
-/* Nút xem tất cả */
-.sp-top-actions {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: -15px;
-    margin-bottom: 20px;
-}
-
-.sp-view-all-btn {
-    font-size: 0.9em;
-    font-weight: 700;
-    color: #0F52BA;
-    background: #F8FAFC;
-    padding: 8px 18px;
-    border-radius: 20px;
-    text-decoration: none !important;
-    border: 1px solid #E2E8F0;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    transition: all 0.3s ease;
-}
-
-.sp-view-all-btn:hover {
-    background: #0F52BA;
-    color: white;
-    border-color: #0F52BA;
-    transform: translateX(4px);
-}
-
-/* Layout chính */
 .sp-explore-grid {
     display: grid;
     grid-template-columns: 4fr 2fr;
@@ -198,46 +166,69 @@
     align-items: start;
 }
 
-/* LEFT SIDE */
 .sp-general-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
-/* RIGHT SIDE */
+.sp-link-card {
+    background: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 20px;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.sp-link-card:hover {
+    transform: translateY(-6px);
+    border-color: #0F52BA;
+    box-shadow: 0 20px 40px rgba(15,82,186,0.12);
+}
+
+.sp-link-card a {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+.sp-link-icon {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.sp-link-title {
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1E293B;
+}
+
+.sp-link-desc {
+    color: #64748B;
+    line-height: 1.6;
+}
+
 .sp-dept-container {
     background: linear-gradient(145deg, #ffffff, #f8fafc);
     border: 1px solid #E2E8F0;
     border-radius: 20px;
     padding: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
-    display: flex;
-    flex-direction: column;
-    height: 100%;
 }
 
-/* Header */
 .sp-dept-header {
-    font-family: 'Manrope', sans-serif;
     font-size: 1.1em;
     font-weight: 800;
-    color: #0F172A;
     margin-bottom: 20px;
     padding-bottom: 15px;
     border-bottom: 2px solid #E2E8F0;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
-/* List */
 .sp-dept-list {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-/* Item */
 .sp-dept-item {
     display: flex;
     align-items: center;
@@ -248,13 +239,11 @@
     text-decoration: none !important;
     color: #1E293B;
     font-weight: 600;
-    border: 1px solid transparent;
     transition: all 0.3s ease;
 }
 
 .sp-dept-item:hover {
     background: #F0F9FF;
-    border-color: #BAE6FD;
     color: #0F52BA;
     transform: translateX(6px);
 }
@@ -277,36 +266,22 @@
 }
 
 /* DARK MODE */
+.dark-mode .sp-link-card,
 .dark-mode .sp-dept-container {
     background: #1E293B;
     border-color: #334155;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
+.dark-mode .sp-link-title,
 .dark-mode .sp-dept-header {
     color: #F8FAFC;
-    border-color: #334155;
+}
+
+.dark-mode .sp-link-desc {
+    color: #CBD5E1;
 }
 
 .dark-mode .sp-dept-item {
     background: #0F172A;
     color: #E2E8F0;
 }
-
-.dark-mode .sp-dept-item:hover {
-    background: rgba(56, 189, 248, 0.1);
-    border-color: #38BDF8;
-    color: #38BDF8;
-}
-
-.dark-mode .sp-view-all-btn {
-    background: rgba(56, 189, 248, 0.1);
-    color: #38BDF8;
-    border-color: rgba(56, 189, 248, 0.2);
-}
-
-.dark-mode .sp-view-all-btn:hover {
-    background: #38BDF8;
-    color: #0F172A;
-}
-```
