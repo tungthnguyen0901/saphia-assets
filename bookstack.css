@@ -281,3 +281,22 @@
     background: #38BDF8; 
     color: #0F172A; 
 }
+/* Fix grid 2 cột */
+.sp-explore-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 3fr) minmax(280px, 2fr) !important;
+    align-items: start;
+    gap: 25px;
+    width: 100%;
+}
+
+.sp-general-cards {
+    min-width: 0;
+}
+
+.sp-dept-container {
+    min-width: 0;
+}
+.sp-explore-grid > * {
+    width: 100%;
+}
