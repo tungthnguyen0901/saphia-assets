@@ -6,6 +6,13 @@
 .sp-animate { animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; opacity: 0; }
 .sp-delay-1 { animation-delay: 0.1s; } .sp-delay-2 { animation-delay: 0.3s; } .sp-delay-3 { animation-delay: 0.5s; } .sp-delay-4 { animation-delay: 0.7s; }
 
+/* BOOKSTACK PAGE TITLE */
+#bkmrk-page-title {
+    font-family: 'Manrope', sans-serif !important;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
 .saphia-dashboard {
     font-family: 'Inter', sans-serif;
 
