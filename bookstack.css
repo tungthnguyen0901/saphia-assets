@@ -18,12 +18,20 @@
 }
 
 /* Font Tiêu đề (Manrope: Hiện đại, mạnh mẽ, ngầu) */
-#bkmrk-page-title,
 .sp-hero-v2 h1,
 .sp-section-title,
 .sp-link-title,
 .sp-ring-val {
     font-family: 'Manrope', sans-serif !important;
+}
+#bkmrk-page-title {
+    font-family: 'Manrope', sans-serif !important;
+    font-weight: 800 !important; /* Độ đậm cực đại */
+    color: #000000 !important;   /* Màu đen tuyệt đối */
+    font-size: 2.5rem !important; /* Có thể chỉnh to ra nếu muốn */
+    letter-spacing: -1.5px !important; /* Hơi khít lại nhìn sẽ hiện đại hơn */
+    margin-bottom: 20px !important;
+    display: block !important;
 }
 
 /* ========================================================= */
@@ -108,14 +116,4 @@
 .dark-mode .sp-alert-v2 { background: linear-gradient(90deg, #1E293B, #0F172A); border-color: #F59E0B; border-left: 6px solid #F59E0B;}
 .dark-mode .sp-section-title::after { background: #334155; }
 .dark-mode .sp-link-card:hover { border-color: #38BDF8; box-shadow: 0 20px 40px rgba(56, 189, 248, 0.15); }
-
-/* ========================================================= */
-/* 8. DỌN DẸP TRANG CHỦ (TÀNG HÌNH TIÊU ĐỀ & 2 CỘT)          */
-/* ========================================================= */
-html.saphia-clean-home .breadcrumbs,
-html.saphia-clean-home h1#bkmrk-page-title,
-html.saphia-clean-home .page-meta,
-html.saphia-clean-home #comments { display: none !important; }
-html.saphia-clean-home .tri-layout-left,
-html.saphia-clean-home .tri-layout-right { display: none !important; }
-html.saphia-clean-home .tri-layout-middle { max-width: 100% !important; margin: 0 !important; }
+.dark-mode #bkmrk-page-title {color: #ffffff !important;}
