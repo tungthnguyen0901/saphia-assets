@@ -281,22 +281,39 @@
     background: #38BDF8; 
     color: #0F172A; 
 }
-/* Fix grid 2 cột */
+```css
+/* ========================================================= */
+/* FIX GRID 2 CỘT BOOKSTACK                                  */
+/* ========================================================= */
+
 .sp-explore-grid {
     display: grid !important;
-    grid-template-columns: minmax(0, 3fr) minmax(280px, 2fr) !important;
-    align-items: start;
+    grid-template-columns: minmax(0, 3fr) minmax(320px, 2fr) !important;
     gap: 25px;
+    align-items: start;
     width: 100%;
 }
 
+.sp-explore-grid > * {
+    width: 100%;
+    min-width: 0;
+}
+
 .sp-general-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
     min-width: 0;
 }
 
 .sp-dept-container {
     min-width: 0;
 }
-.sp-explore-grid > * {
-    width: 100%;
+
+/* Mobile */
+@media (max-width: 900px) {
+    .sp-explore-grid {
+        grid-template-columns: 1fr !important;
+    }
 }
+```
