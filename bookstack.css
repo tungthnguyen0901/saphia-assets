@@ -1,18 +1,3 @@
-<script>
-    // Chỉ kích hoạt chế độ "Dashboard" nếu đường dẫn hiện tại là trang gốc (/)
-    if (window.location.pathname === '/') {
-        document.documentElement.classList.add('saphia-clean-home');
-    }
-</script>
-
-<style>
-    /* XÓA BỎ DẤU VẾT "PAGE" TRÊN TRANG CHỦ */
-    html.saphia-clean-home .breadcrumbs { display: none !important; }        /* Ẩn thanh Sách > Hệ thống > Trang chủ */
-    html.saphia-clean-home h1#bkmrk-page-title { display: none !important; } /* Ẩn Tiêu đề chữ to mặc định */
-    html.saphia-clean-home .page-meta { display: none !important; }          /* Ẩn thông tin Người tạo / Cập nhật */
-    html.saphia-clean-home #comments { display: none !important; }           /* Ẩn khu vực bình luận bên dưới */
-    html.saphia-clean-home .page-content { padding-top: 5px !important; }    /* Kéo cái Banner xanh lên cho sát mép trên */
-</style>
 /* HIỆU ỨNG CHUYỂN ĐỘNG (ANIMATIONS) */
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes gradientMove { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
@@ -83,3 +68,18 @@
 .dark-mode .sp-alert-v2 { background: linear-gradient(90deg, #1E293B, #0F172A); border-color: #F59E0B; border-left: 6px solid #F59E0B;}
 .dark-mode .sp-section-title::after { background: #334155; }
 .dark-mode .sp-link-card:hover { border-color: #38BDF8; box-shadow: 0 20px 40px rgba(56, 189, 248, 0.15); }
+
+/* ========================================================= */
+/* DỌN DẸP TRANG CHỦ (TÀNG HÌNH TIÊU ĐỀ & 2 CỘT)              */
+/* ========================================================= */
+html.saphia-clean-home .breadcrumbs,
+html.saphia-clean-home h1#bkmrk-page-title,
+html.saphia-clean-home .page-meta,
+html.saphia-clean-home #comments { display: none !important; }
+
+/* Giấu cột bên trái và cột bên phải */
+html.saphia-clean-home .tri-layout-left,
+html.saphia-clean-home .tri-layout-right { display: none !important; }
+
+/* Nới rộng phần nội dung ở giữa ra 100% để tràn viền */
+html.saphia-clean-home .tri-layout-middle { max-width: 100% !important; margin: 0 !important; }
