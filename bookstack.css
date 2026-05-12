@@ -155,11 +155,12 @@
 .dark-mode .sp-link-card:hover { border-color: #38BDF8; box-shadow: 0 20px 40px rgba(56, 189, 248, 0.15); }
 .dark-mode #bkmrk-page-title {color: #ffffff !important;}
 
+```css
 /* ========================================================= */
-/* 8. KHÁM PHÁ THƯ VIỆN (CHIA 2 CỘT & NÚT XEM TẤT CẢ)        */
+/* 8. KHÁM PHÁ THƯ VIỆN                                      */
 /* ========================================================= */
 
-/* Nút Xem tất cả (Nằm ngay dưới tiêu đề) */
+/* Nút xem tất cả */
 .sp-top-actions {
     display: flex;
     justify-content: flex-end;
@@ -175,35 +176,36 @@
     padding: 8px 18px;
     border-radius: 20px;
     text-decoration: none !important;
-    transition: all 0.3s ease;
     border: 1px solid #E2E8F0;
     display: inline-flex;
     align-items: center;
     gap: 5px;
+    transition: all 0.3s ease;
 }
 
 .sp-view-all-btn:hover {
     background: #0F52BA;
-    color: #ffffff;
+    color: white;
     border-color: #0F52BA;
     transform: translateX(4px);
 }
 
-/* Bố cục Grid 60-40 */
-.sp-explore-grid { 
-    display: grid; 
-    grid-template-columns: 3fr 2fr; 
-    gap: 25px; 
+/* Layout chính */
+.sp-explore-grid {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    gap: 25px;
+    align-items: start;
 }
 
-/* Cột trái: Chứa các thẻ Card (Dùng lại class sp-link-card của bạn) */
-.sp-general-cards { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
-    gap: 20px; 
+/* LEFT SIDE */
+.sp-general-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
-/* Cột phải: Khung chứa danh sách phòng ban */
+/* RIGHT SIDE */
 .sp-dept-container {
     background: linear-gradient(145deg, #ffffff, #f8fafc);
     border: 1px solid #E2E8F0;
@@ -212,31 +214,30 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.02);
     display: flex;
     flex-direction: column;
-    position: relative;
-    overflow: hidden;
+    height: 100%;
 }
 
-/* Tiêu đề cột phải */
+/* Header */
 .sp-dept-header {
     font-family: 'Manrope', sans-serif;
     font-size: 1.1em;
     font-weight: 800;
     color: #0F172A;
     margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #E2E8F0;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    border-bottom: 2px solid #E2E8F0;
-    padding-bottom: 15px;
 }
 
-/* Danh sách dọc */
+/* List */
 .sp-dept-list {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-/* Từng item trong danh sách */
+/* Item */
 .sp-dept-item {
     display: flex;
     align-items: center;
@@ -247,73 +248,65 @@
     text-decoration: none !important;
     color: #1E293B;
     font-weight: 600;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid transparent;
+    transition: all 0.3s ease;
 }
 
 .sp-dept-item:hover {
     background: #F0F9FF;
     border-color: #BAE6FD;
     color: #0F52BA;
-    transform: translateX(6px); /* Hiệu ứng trượt nhẹ sang phải */
+    transform: translateX(6px);
 }
 
-.sp-dept-icon { font-size: 1.4em; }
+.sp-dept-icon {
+    font-size: 1.4em;
+}
 
-/* Thu cột lại khi xem trên iPad/Điện thoại */
+/* MOBILE */
 @media (max-width: 900px) {
-    .sp-explore-grid { grid-template-columns: 1fr; }
+
+    .sp-explore-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sp-general-cards {
+        grid-template-columns: 1fr;
+    }
+
 }
 
-/* --- Tích hợp Dark Mode --- */
-.dark-mode .sp-dept-container { background: #1E293B; border-color: #334155; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
-.dark-mode .sp-dept-header { color: #F8FAFC; border-color: #334155; }
-.dark-mode .sp-dept-item { background: #0F172A; color: #E2E8F0; }
-.dark-mode .sp-dept-item:hover { background: rgba(56, 189, 248, 0.1); border-color: #38BDF8; color: #38BDF8; }
+/* DARK MODE */
+.dark-mode .sp-dept-container {
+    background: #1E293B;
+    border-color: #334155;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
 
-/* Dark mode cho nút xem tất cả mới */
-.dark-mode .sp-view-all-btn { 
-    background: rgba(56, 189, 248, 0.1); 
-    color: #38BDF8; 
+.dark-mode .sp-dept-header {
+    color: #F8FAFC;
+    border-color: #334155;
+}
+
+.dark-mode .sp-dept-item {
+    background: #0F172A;
+    color: #E2E8F0;
+}
+
+.dark-mode .sp-dept-item:hover {
+    background: rgba(56, 189, 248, 0.1);
+    border-color: #38BDF8;
+    color: #38BDF8;
+}
+
+.dark-mode .sp-view-all-btn {
+    background: rgba(56, 189, 248, 0.1);
+    color: #38BDF8;
     border-color: rgba(56, 189, 248, 0.2);
 }
-.dark-mode .sp-view-all-btn:hover { 
-    background: #38BDF8; 
-    color: #0F172A; 
-}
-```css
-/* ========================================================= */
-/* FIX GRID 2 CỘT BOOKSTACK                                  */
-/* ========================================================= */
 
-.sp-explore-grid {
-    display: grid !important;
-    grid-template-columns: minmax(0, 3fr) minmax(320px, 2fr) !important;
-    gap: 25px;
-    align-items: start;
-    width: 100%;
-}
-
-.sp-explore-grid > * {
-    width: 100%;
-    min-width: 0;
-}
-
-.sp-general-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    min-width: 0;
-}
-
-.sp-dept-container {
-    min-width: 0;
-}
-
-/* Mobile */
-@media (max-width: 900px) {
-    .sp-explore-grid {
-        grid-template-columns: 1fr !important;
-    }
+.dark-mode .sp-view-all-btn:hover {
+    background: #38BDF8;
+    color: #0F172A;
 }
 ```
