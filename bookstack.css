@@ -117,3 +117,18 @@
 .dark-mode .sp-section-title::after { background: #334155; }
 .dark-mode .sp-link-card:hover { border-color: #38BDF8; box-shadow: 0 20px 40px rgba(56, 189, 248, 0.15); }
 .dark-mode #bkmrk-page-title {color: #ffffff !important;}
+
+/* ========================================================= */
+/* 8. DỌN DẸP TRANG CHỦ (TÀNG HÌNH 2 CỘT & ĐƯỜNG DẪN)        */
+/* ========================================================= */
+/* Giấu thanh đường dẫn, thông tin người tạo, và bình luận */
+html.saphia-clean-home .breadcrumbs,
+html.saphia-clean-home .page-meta,
+html.saphia-clean-home #comments { display: none !important; }
+
+/* Giấu cột menu bên trái và cột bên phải */
+html.saphia-clean-home .tri-layout-left,
+html.saphia-clean-home .tri-layout-right { display: none !important; }
+
+/* Nới rộng phần nội dung ở giữa ra 100% để tràn viền */
+html.saphia-clean-home .tri-layout-middle { max-width: 100% !important; margin: 0 !important; }
