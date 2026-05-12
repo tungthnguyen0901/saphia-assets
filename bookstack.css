@@ -1,40 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap');
-
-/* HIỆU ỨNG CHUYỂN ĐỘNG (ANIMATIONS) */
+/* ========================================================= */
+/* 1. HIỆU ỨNG CHUYỂN ĐỘNG (ANIMATIONS)                      */
+/* ========================================================= */
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes gradientMove { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
 .sp-animate { animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; opacity: 0; }
-.sp-delay-1 { animation-delay: 0.1s; } .sp-delay-2 { animation-delay: 0.3s; } .sp-delay-3 { animation-delay: 0.5s; } .sp-delay-4 { animation-delay: 0.7s; }
+.sp-delay-1 { animation-delay: 0.1s; } 
+.sp-delay-2 { animation-delay: 0.3s; } 
+.sp-delay-3 { animation-delay: 0.5s; } 
+.sp-delay-4 { animation-delay: 0.7s; }
 
-/* BOOKSTACK PAGE TITLE */
-#bkmrk-page-title {
-    font-family: 'Manrope', sans-serif !important;
-    font-weight: 800;
-    letter-spacing: -1px;
-}
-
+/* ========================================================= */
+/* 2. HỆ THỐNG FONT CHỮ (TYPOGRAPHY)                         */
+/* ========================================================= */
+/* Font tổng thể (Inter: Dễ đọc, thanh thoát) */
 .saphia-dashboard {
     font-family: 'Inter', sans-serif;
+}
 
+/* Font Tiêu đề (Manrope: Hiện đại, mạnh mẽ, ngầu) */
+#bkmrk-page-title,
 .sp-hero-v2 h1,
 .sp-section-title,
 .sp-link-title,
 .sp-ring-val {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope', sans-serif !important;
 }
 
-/* HERO BANNER */
+/* ========================================================= */
+/* 3. HERO BANNER                                            */
+/* ========================================================= */
 .sp-hero-v2 {
     background: linear-gradient(-45deg, #0F52BA, #1E3A8A, #00BFFF, #0F52BA);
-    background-size: 300% 300%; animation: gradientMove 10s ease infinite, fadeInUp 0.8s ease forwards;
+    background-size: 300% 300%; 
+    animation: gradientMove 10s ease infinite, fadeInUp 0.8s ease forwards;
     color: white; padding: 60px 40px; border-radius: 24px; text-align: center; margin-bottom: 40px;
     box-shadow: 0 15px 35px rgba(15, 82, 186, 0.25); position: relative; overflow: hidden;
 }
-.sp-hero-v2::before { content: ''; position: absolute; top: -50%; left: -10%; width: 200px; height: 200px; background: rgba(255,255,255,0.1); filter: blur(40px); border-radius: 50%; }
-.sp-hero-v2 h1 {    font-family: 'Manrope', sans-serif !important; font-size: 2.8em; font-weight: 800; letter-spacing: -1px; line-height: 1.1;}
-.sp-hero-v2 p { font-size: 1.25em; margin: 0; opacity: 0.9; line-height: 1.6; font-weight: 400; max-width: 800px; margin: 0 auto;}
+.sp-hero-v2::before { 
+    content: ''; position: absolute; top: -50%; left: -10%; width: 200px; height: 200px; 
+    background: rgba(255,255,255,0.1); filter: blur(40px); border-radius: 50%; 
+}
+.sp-hero-v2 h1 { 
+    font-size: 2.8em; font-weight: 800; letter-spacing: -1px; line-height: 1.2; 
+    margin: 0 0 15px 0; border: none; text-shadow: 0 2px 10px rgba(0,0,0,0.15); /* Thêm bóng mờ nhẹ giúp chữ nổi bật */
+}
+.sp-hero-v2 p { 
+    font-size: 1.15em; margin: 0 auto; opacity: 0.95; line-height: 1.7; font-weight: 400; max-width: 800px;
+}
 
-/* THÔNG BÁO */
+/* ========================================================= */
+/* 4. THÔNG BÁO (ALERTS)                                     */
+/* ========================================================= */
 .sp-alert-v2 {
     background: linear-gradient(90deg, #FFF8EA, #ffffff); border-left: 6px solid #F59E0B;
     padding: 20px 30px; border-radius: 12px; margin-bottom: 40px; display: flex; align-items: center; gap: 20px; color: #475569;
@@ -43,9 +59,12 @@
 .sp-alert-v2:hover { transform: scale(1.01); }
 .sp-alert-icon { font-size: 1.8em; animation: pulse 2s infinite; }
 @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
-.sp-alert-text strong { color: #D97706; font-size: 1.1em;}
+.sp-alert-text { line-height: 1.6; }
+.sp-alert-text strong { color: #D97706; font-size: 1.1em; font-weight: 700;}
 
-/* VÒNG STAT */
+/* ========================================================= */
+/* 5. VÒNG STAT (THỐNG KÊ)                                   */
+/* ========================================================= */
 .sp-stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 50px; }
 .sp-stat-card { background: white; border: 1px solid #F1F5F9; padding: 30px 20px; border-radius: 24px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.04); transition: all 0.4s ease; }
 .sp-stat-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(15, 82, 186, 0.1); }
@@ -54,12 +73,14 @@
 .ring-blue { background: conic-gradient(#0F52BA 0% 85%, #E2E8F0 85% 100%); }
 .ring-green { background: conic-gradient(#10B981 0% 65%, #E2E8F0 65% 100%); }
 .ring-amber { background: conic-gradient(#F59E0B 0% 100%, #E2E8F0 100% 100%); }
-.sp-ring-val { position: relative; z-index: 1; font-size: 2em; font-weight: 800; }
+.sp-ring-val { position: relative; z-index: 1; font-size: 2.2em; font-weight: 800; letter-spacing: -1px;}
 .val-blue { color: #0F52BA; } .val-green { color: #10B981; } .val-amber { color: #F59E0B; }
-.sp-stat-card p { margin: 0; color: #64748B; font-size: 1.1em; font-weight: 600; }
+.sp-stat-card p { margin: 0; color: #64748B; font-size: 1.05em; font-weight: 600; }
 
-/* TRUY CẬP NHANH */
-.sp-section-title { font-size: 1.6em; color: #0F172A; margin-bottom: 25px; font-weight: 800; display: flex; align-items: center; gap: 10px;}
+/* ========================================================= */
+/* 6. TRUY CẬP NHANH                                         */
+/* ========================================================= */
+.sp-section-title { font-size: 1.6em; color: #0F172A; margin-bottom: 25px; font-weight: 800; display: flex; align-items: center; gap: 10px; letter-spacing: -0.5px;}
 .sp-section-title::after { content: ''; flex: 1; height: 2px; background: #E2E8F0; margin-left: 15px;}
 .sp-links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
 .sp-link-card {
@@ -71,10 +92,12 @@
 .sp-link-card:hover { transform: translateY(-8px) scale(1.02); border-color: #0F52BA; box-shadow: 0 20px 40px rgba(15, 82, 186, 0.12); }
 .sp-link-icon { font-size: 3em; margin-bottom: 20px; transition: transform 0.3s; }
 .sp-link-card:hover .sp-link-icon { transform: scale(1.1) rotate(5deg); }
-.sp-link-title { font-size: 1.2em; font-weight: 00; margin-bottom: 10px; color: #1E293B; }
-.sp-link-desc { font-size: 1em; color: #64748B; margin: 0; line-height: 1.6; z-index: 2; position: relative;}
+.sp-link-title { font-size: 1.3em; font-weight: 700; margin-bottom: 10px; color: #1E293B; letter-spacing: -0.5px;}
+.sp-link-desc { font-size: 0.95em; color: #64748B; margin: 0; line-height: 1.6; z-index: 2; position: relative;}
 
-/* DARK MODE CHUẨN BOOKSTACK */
+/* ========================================================= */
+/* 7. DARK MODE CHUẨN BOOKSTACK                              */
+/* ========================================================= */
 .dark-mode .sp-stat-card, .dark-mode .sp-link-card { background: #1E293B; border-color: #334155; box-shadow: 0 10px 30px rgba(0,0,0,0.2);}
 .dark-mode .sp-ring-wrap::before { background: #1E293B; }
 .dark-mode .ring-blue { background: conic-gradient(#38BDF8 0% 85%, #334155 85% 100%); }
@@ -87,16 +110,12 @@
 .dark-mode .sp-link-card:hover { border-color: #38BDF8; box-shadow: 0 20px 40px rgba(56, 189, 248, 0.15); }
 
 /* ========================================================= */
-/* DỌN DẸP TRANG CHỦ (TÀNG HÌNH TIÊU ĐỀ & 2 CỘT)              */
+/* 8. DỌN DẸP TRANG CHỦ (TÀNG HÌNH TIÊU ĐỀ & 2 CỘT)          */
 /* ========================================================= */
 html.saphia-clean-home .breadcrumbs,
 html.saphia-clean-home h1#bkmrk-page-title,
 html.saphia-clean-home .page-meta,
 html.saphia-clean-home #comments { display: none !important; }
-
-/* Giấu cột bên trái và cột bên phải */
 html.saphia-clean-home .tri-layout-left,
 html.saphia-clean-home .tri-layout-right { display: none !important; }
-
-/* Nới rộng phần nội dung ở giữa ra 100% để tràn viền */
 html.saphia-clean-home .tri-layout-middle { max-width: 100% !important; margin: 0 !important; }
