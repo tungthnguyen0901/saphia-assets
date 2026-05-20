@@ -103,8 +103,9 @@
 .sp-ring-wrap::before { content: ""; position: absolute; width: 72px; height: 72px; background: white; border-radius: 50%; }
 .ring-blue { background: conic-gradient(#0F52BA 0% 15%, #E2E8F0 15% 100%); }
 .ring-green { background: conic-gradient(#10B981 0% 100%, #E2E8F0 100% 100%); }
+.ring-amber { background: conic-gradient(#FBBF24 0% 100%, #334155 100% 100%); }
 .sp-ring-val { position: relative; z-index: 1; font-size: 1.4em; font-weight: 800; letter-spacing: -0.5px;}
-.val-blue { color: #0F52BA; } .val-green { color: #10B981; }
+.val-blue { color: #0F52BA; } .val-green { color: #10B981; } .val-amber { color: #FBBF24; }
 
 /* Cột thông tin bên phải */
 .sp-stat-info { text-align: left; display: flex; flex-direction: column; gap: 6px; z-index: 1;}
@@ -145,7 +146,7 @@
 /* 7. DARK MODE CHUẨN BOOKSTACK                              */
 /* ========================================================= */
 .dark-mode .sp-link-card { background: #1E293B; border-color: #334155; box-shadow: 0 10px 30px rgba(0,0,0,0.2);}
-.dark-mode .ring-blue { background: conic-gradient(#38BDF8 0% 85%, #334155 85% 100%); }
+.dark-mode .ring-blue { background: conic-gradient(#38BDF8 0% 15%, #334155 15% 100%); }
 .dark-mode .ring-green { background: conic-gradient(#34D399 0% 65%, #334155 65% 100%); }
 .dark-mode .ring-amber { background: conic-gradient(#FBBF24 0% 100%, #334155 100% 100%); }
 .dark-mode .val-blue { color: #38BDF8; } .dark-mode .val-green { color: #34D399; } .dark-mode .val-amber { color: #FBBF24; }
