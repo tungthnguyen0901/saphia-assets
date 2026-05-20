@@ -101,7 +101,7 @@
 /* Thu nhỏ vòng tròn lại cho tinh tế hơn */
 .sp-ring-wrap { width: 90px; height: 90px; margin: 0; flex-shrink: 0; border-radius: 50%; display: flex; justify-content: center; align-items: center; position: relative; background: #E2E8F0; }
 .sp-ring-wrap::before { content: ""; position: absolute; width: 72px; height: 72px; background: white; border-radius: 50%; }
-.ring-blue { background: conic-gradient(#0F52BA 0% 85%, #E2E8F0 85% 100%); }
+.ring-blue { background: conic-gradient(#0F52BA 0% 15%, #E2E8F0 15% 100%); }
 .ring-green { background: conic-gradient(#10B981 0% 100%, #E2E8F0 100% 100%); }
 .sp-ring-val { position: relative; z-index: 1; font-size: 1.4em; font-weight: 800; letter-spacing: -0.5px;}
 .val-blue { color: #0F52BA; } .val-green { color: #10B981; }
